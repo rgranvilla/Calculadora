@@ -25,8 +25,9 @@ public class Teclado extends JPanel implements ActionListener {
 		GridBagConstraints c = new GridBagConstraints();
 		
 		setLayout(layout);
+		setBackground(new Color(46, 49, 50));
 		
-		setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		setBorder(BorderFactory.createLineBorder(new Color(46, 49, 50)));
 		c.weightx = 1;
 		c.weighty = 1;
 		c.fill = GridBagConstraints.BOTH;
