@@ -2,6 +2,8 @@ package calc.visao;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 
 import javax.swing.JFrame;
 
@@ -13,6 +15,7 @@ public class Calculadora extends JFrame {
 		organizarLayout();
 		
 		setSize(232, 322);
+//		setUndecorated(true); *** faz a barra de título sumir
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
@@ -32,5 +35,12 @@ public class Calculadora extends JFrame {
 
 	public static void main(String[] args) {
 		new Calculadora();
+		
+		GraphicsEnvironment e = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		Font[] fonts = e.getAllFonts();
+		
+		for(Font fontTmp : fonts) {
+			System.out.println(fontTmp.getFontName());
+		}
 	}
 }
